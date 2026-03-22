@@ -5,6 +5,7 @@ import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 import { CountDown } from './components/CountDown';
 import { DefaultInput } from './components/DefaultInput';
+import { Cycles } from './components/Cycles';
 
 export function App() {
     return (<>
@@ -17,13 +18,15 @@ export function App() {
         <Container>
             <CountDown/>
         </Container>
-
         <Container>
-            <form className='form'>
-                <div className="rowForm">
+            <div className="rowForm">                   
+                <form className='form'>
                     <DefaultInput disabled id="meuInput" labelText="task" type="text" placeholder='Digite alguma coisa'/>
-                </div>
-            </form>
+                </form>
+            </div>
+            <div className="rowForm">
+                <Cycles/>
+            </div>            
         </Container>
 
     </>);
