@@ -12,9 +12,10 @@ type AvaliableThemes = "light" | "dark";
 
 export function Menu() {
   const [theme, setTheme] = useState(() => {
-    const storedTheme = localStorage.getItem("theme") as
-      | AvaliableThemes
-      | "dark";
+    const storedTheme =
+      localStorage.getItem("theme") !== null
+        ? (localStorage.getItem("theme") as AvaliableThemes)
+        : "dark";
     return storedTheme;
   });
 
