@@ -4,7 +4,7 @@ export type TaskStateModel = {
   tasks: TaskModel[];
   secondsRemaining: number;
   formattedRemaining: string;
-  activeTaskId: TaskModel | null;
+  activeTask: TaskModel | null;
   currentCycle: number; // 1 a 8
   config: {
     work: number;
