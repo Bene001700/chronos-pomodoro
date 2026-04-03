@@ -21,12 +21,12 @@
 }
 
 
-.workTime{
+.work{
     background: var(--warning);
 }
-.shortBreakTime{
+.shortBreak{
     background: var(--primary);
 }
-.longBreakTime{
+.longBreak{
     background: var(--info);
 }
