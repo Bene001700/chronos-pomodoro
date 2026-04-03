@@ -4,7 +4,7 @@ import { getNextCycleType } from "../../utils/getNextCycleType";
 import styles from "./styles.module.css";
 export function Cycles() {
   const { state } = useTaskContext();
-  console.log(state, "state do cycles");
+
   const cycleStep = Array.from({ length: state.currentCycle });
 
   const cycleDescriptionMap = {
