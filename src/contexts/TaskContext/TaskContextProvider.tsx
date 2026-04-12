@@ -31,19 +31,19 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
         });
       }
     });
-    if (!state.activeTask) {
-      worker.terminate();
-    }
+    if (!state.activeTask) worker.terminate();
 
     worker.postMessage(state);
   }, [state]);
 
   useEffect(() => {
     if (state.activeTask && playBeepRef.current == null) {
-      console.log("Carregando áudio");
       playBeepRef.current = loadBeep();
+    } else {
+      playBeepRef.current = null;
     }
   }, [state.activeTask]);
+
   return (
     <TaskContext.Provider value={{ state, dispatch }}>
       {children}
